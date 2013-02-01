@@ -1,0 +1,15 @@
+{
+  "name":    "jqaas",
+  "version": "0.0.1",
+
+  "dependencies": {
+    "coffee-script": "1.2.x",
+    "express":       "3.0.x",
+    "nodemon":       "0.6.18"
+  },
+
+  "engines": {
+    "node": "0.8.x",
+    "npm":  "1.1.x"
+  }
+}
