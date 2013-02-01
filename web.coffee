@@ -35,6 +35,9 @@ app.get "/", (req, res) ->
     res.send """
       <div class="container" style="width:600px; margin-left: auto; margin-right: auto; margin-top: 100px;">
         <form method="get">
+          <h2>
+            <a href="http://stedolan.github.com/jq/">jq</a> as a service
+          </h2>
           <label for="input">Input (URL)</label>
           <input name="input" size="100" value="https://gist.github.com/raw/0f6d146cdfb814ab23d9/test.json">
           <br/><br/>
