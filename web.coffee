@@ -2,7 +2,7 @@ coffee  = require("coffee-script")
 express = require("express")
 spawn   = require("child_process").spawn
 
-escape = (arg) -> '"' + arg.replace(/(["\|\s'$`\\])/g,'\\$1') + '"'
+escape = (arg) -> '"' + arg.replace(/(["\|\s;'$`\\])/g,'\\$1') + '"'
 
 express.logger.format "method",     (req, res) -> req.method.toLowerCase()
 express.logger.format "url",        (req, res) -> req.url.replace('"', "&quot")
