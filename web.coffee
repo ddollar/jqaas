@@ -2,17 +2,13 @@ coffee  = require("coffee-script")
 express = require("express")
 spawn   = require("child_process").spawn
 
-delay  = (ms, cb) -> setTimeout  cb, ms
-every  = (ms, cb) -> setInterval cb, ms
-escape = (arg)    -> '"' + arg.replace(/(["\|\s'$`\\])/g,'\\$1') + '"'
+escape = (arg) -> '"' + arg.replace(/(["\|\s'$`\\])/g,'\\$1') + '"'
 
 express.logger.format "method",     (req, res) -> req.method.toLowerCase()
 express.logger.format "url",        (req, res) -> req.url.replace('"', "&quot")
 express.logger.format "user-agent", (req, res) -> (req.headers["user-agent"] || "").replace('"', "")
 
 app = express()
-
-app.disable "x-powered-by"
 
 app.use express.logger
   buffer: false
