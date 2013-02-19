@@ -35,7 +35,7 @@ app.get "/", (req, res) ->
             <a href="http://stedolan.github.com/jq/">jq</a> as a service
           </h2>
           <label for="input">Input (URL)</label>
-          <input name="input" size="100" value="https://gist.github.com/raw/0f6d146cdfb814ab23d9/test.json">
+          <input name="input" size="100" value="https://gist.github.com/ddollar/0f6d146cdfb814ab23d9/raw/test.json">
           <br/><br/>
           <label for="express">Expression</label>
           <input name="expression" size="100" value=".[] | {name}">
